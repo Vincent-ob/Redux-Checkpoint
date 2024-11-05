@@ -1,38 +1,157 @@
+/* App.css */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
 .App {
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.AddTask {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.AddTask input[type="text"] {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.AddTask button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #28a745;
+  color: #fff;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.AddTask button:hover {
+  background-color: #218838;
+}
+
+.ListTask {
   display: flex;
   flex-direction: column;
+  gap: 10px;
+}
+
+.Task {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.Task span {
+  cursor: pointer;
+}
+
+.Task span.done {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.Task button {
+  padding: 5px 10px;
+  font-size: 0.9em;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.Task button:hover {
+  background-color: #0056b3;
+}
+
+.FilterButtons {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 10px;
+  margin-top: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.FilterButtons button {
+  padding: 5px 15px;
+  font-size: 0.9em;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.FilterButtons button.all {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+.FilterButtons button.done {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.FilterButtons button.not-done {
+  background-color: #ffc107;
+  color: #333;
+}
+
+.FilterButtons button:hover {
+  opacity: 0.9;
+}
+
+/* Add these styles to App.css */
+
+.Task button {
+  padding: 5px 10px;
+  font-size: 0.9em;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  transition: background-color 0.3s ease;
+  margin-left: 5px;
+}
+
+.Task button:hover {
+  background-color: #0056b3;
+}
+
+/* Style specifically for "Done" button */
+.Task button:last-child {
+  background-color: #28a745;
+}
+
+.Task button:last-child:hover {
+  background-color: #218838;
 }
